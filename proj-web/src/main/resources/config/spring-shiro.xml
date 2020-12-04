@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+       <!-- 缓存管理器 使用Ehcache实现 -->
+		<bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+			<property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>
+		</bean>
+       <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+           <property name="cacheManager" ref="cacheManager"/>
+       </bean>
+    <!-- Spring Integration -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+    <!-- Enable Shiro Annotations for Spring-configured beans. Only run after
+        the lifecycleBeanProcessor has run: -->
+    <bean id="annotationProxy"
+          class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+          depends-on="lifecycleBeanPostProcessor" />
+    <bean
+            class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager" />
+    </bean>
+       <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+              <property name="securityManager" ref="securityManager"/>
+              <!-- override these for application-specific URLs if you like:-->
+              <property name="loginUrl" value="/login"/>
+              <property name="filterChainDefinitions">
+                     <value>
+                         /login = anon
+                         /changePwd = anon
+                         /logout = logout
+                         /api/ebp/syspassport/login = anon
+                         /api/ebp/syspassport/loginfr = anon
+                         /api/ebp/syspassport/logout = anon
+                         /openapi/** = anon
+                         /druid/** = authc
+                         /static/** = anon
+                         /error/** = anon
+                         /view2/ebp/sysinit/** = anon
+                         /favicon.ico = anon
+                         /** = authc
+                     </value>
+              </property>
+       </bean>
+</beans>

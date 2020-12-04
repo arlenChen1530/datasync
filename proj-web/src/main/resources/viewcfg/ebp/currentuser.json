@@ -1,0 +1,249 @@
+{
+  "ID": {
+    "title": "唯一标识",
+    "visible": {},
+    "required": {},
+    "readonly": {}
+  },
+  "USERNAME": {
+    "title": "用户名",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {
+      "add": true,
+      "edit": true
+    },
+    "readonly": {"edit": true}
+  },
+  "REALNAME": {
+    "title": "真实姓名",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "BIRTHDATE": {
+    "title": "生日",
+    "visible": {},
+    "required": {},
+    "readonly": {}
+  },
+  "CELLPHONE": {
+    "title": "手机号码",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "EMAIL": {
+    "title": "邮箱",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "EMPNO": {
+    "title": "员工号",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "LASTCHANGEPWDTIME": {
+    "title": "最后修改密码时间",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "LASTLOGINIP": {
+    "title": "最后登录Ip",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "LASTLOGINTIME": {
+    "title": "最后登录时间",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "PHONE": {
+    "title": "固定电话",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "SEX": {
+    "title": "性别",
+    "visible": {
+      "query": false,
+      "add": false,
+      "edit": false,
+      "detail": false
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "SEXNAME": {
+    "title": "性别",
+    "visible": {
+      "list": false,
+      "query": false,
+      "add": false,
+      "edit": false,
+      "detail": false
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "SYSDEPARTMENTID": {
+    "title": "所属部门",
+    "visible": {
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": false
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "SYSDEPARTMENTNAME": {
+    "title": "所属部门",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "ADDBY": {
+    "title": "增加人",
+    "visible": {
+      "list": false,
+      "detail": false
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "ADDTIME": {
+    "title": "增加时间",
+    "visible": {
+      "list": false,
+      "detail": false
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "EDITBY": {
+    "title": "修改人",
+    "visible": {
+      "list": false,
+      "detail": false
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "EDITTIME": {
+    "title": "修改时间",
+    "visible": {
+      "list": false,
+      "detail": false
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "REMARK": {
+    "title": "备注",
+    "visible": {
+      "list": true,
+      "query": true,
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "ROLEIDS": {
+    "title": "角色",
+    "visible": {
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "ROLESNAME": {
+    "title": "角色",
+    "visible": {
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  },
+  "STRUCTUREIDS": {
+    "title": "组织结构",
+    "visible": {
+      "add": true,
+      "edit": true,
+      "detail": true
+    },
+    "required": {},
+    "readonly": {}
+  }
+}
